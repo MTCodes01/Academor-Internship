@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form making</title>
+  </head>
+
+  <body>
+    <form name="registration form">
+      <!-- <label>Registration Form</label> -->
+      <h1>Registration Form <img src="https://t10.pimg.jp/065/884/090/1/65884090.jpg" width="50px"></h1>
+      First Name : <input placeholder="First Name" type="text" /> <br /><br />
+      Last Name : <input placeholder="Last Name" type="text" /> <br /><br />
+      Email ID :
+      <input placeholder="Email" type="email" pattern=".+@gmail.com" required />
+      <br /><br />
+      Password : <input placeholder="Password" type="password" /> <br /><br />
+      DOB : <input type="date" /> <br /><br />
+      Gender : <input type="radio" name="gender" />Male
+      <input type="radio" name="gender" />Female <br /><br />
+      City : <input type="checkbox" /> Chennai <input type="checkbox" /> Pune
+      <input type="checkbox" /> Bangalore <br /><br />
+      Course :
+      <select>
+        <option>Web development</option>
+        <option selected>Python</option>
+        <option>ML</option>
+      </select>
+      <br /><br />
+      Phone Number : <input type="number" /> <br /><br />
+      Upload the Certificates :
+      <input type="file" />
+      <br /><br />
+      Interview Timings : From <input type="time" /> to <input type="time" />
+      <br /><br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
