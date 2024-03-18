@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 3</title>
+    <!-- internal CSS -->
+    <style>
+      /* tag name */
+      h2 {
+        color: white;
+        font-size: 35px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: darkmagenta;
+      }
+      #myid {
+        background-color: darkblue;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: red;
+      }
+      #testid {
+        background: linear-gradient(
+          rgba(6, 90, 142, 0.4),
+          rgba(80, 27, 213, 0.7)
+        );
+        color: black;
+      }
+      .myclass {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: oblique;
+        color: chartreuse;
+      }
+      .testclass {
+        color: rgb(0, 0, 0);
+        background-color: rgba(0, 226, 75, 0.62);
+        font-family: fantasy;
+      }
+      img {
+        border-style: solid;
+        border-color: red;
+        border-radius: 100px;
+        box-shadow: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div align="center">
+      <!-- inline-CSS -->
+      <h1
+        style="
+          background-color: aqua;
+          color: black;
+          font-size: 35px;
+          font-style: italic;
+        "
+      >
+        Welcome All
+      </h1>
+      <h2>Thank you</h2>
+      <h2 id="myid">Internal CSS</h2>
+      <h2 class="myclass b">External CSS</h2>
+      <h2 id="testid">ID</h2>
+      <h2 class="testclass">CLASS</h2>
+
+      <img src="./test.png" width="400px" />
+    </div>
+  </body>
+</html>
