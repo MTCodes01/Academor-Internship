@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        padding: 10px;
+        /* background-color: bisque; */
+        font-size: large;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+      }
+      a {
+        margin-left: 30px;
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+        letter-spacing: 0.25px;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+        /* margin-top: 20px; */
+        background-color: rgb(236, 236, 243);
+        width: 50px;
+        border-radius: 6px;
+      }
+      img {
+        position: relative;
+        top: 7px;
+      }
+      #box {
+        width: 400px;
+        height: 400px;
+        background-color: antiquewhite;
+        margin-top: 150px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px grey;
+        text-align: center;
+      }
+      #image {
+        margin: 10px 0px;
+        border: 1px solid;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px grey;
+      }
+      /* flex box */
+      #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      #box:hover {
+        border: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img
+        src="https://about.google/assets-main/img/glue-google-color-logo.svg"
+      />
+      <a href="Day2.html">About</a>
+      <a href="Day4.html">Products</a>
+      <a href="Day5.html">Commitments</a>
+      <a href="Day3.html">Stories</a>
+      <a href="Day1.html">India Blog</a>
+    </nav>
+    <div id="container">
+      <div id="box">
+        <img
+          id="image"
+          src="https://lh3.googleusercontent.com/DqEqxO5Pq4lGN3zdBfDmSWfG-20am-ORpzPA-DxCsnvadS7m_PcooNUPdggBippJsORIkB5ttL61Xa-pea_bzBqQf1FvTtqwIhPslB34qDfvvb9hp3A=w2880-l90-sg-rj-c0xffffff"
+          width="350px"
+        />
+      </div>
+      <div id="box">
+        <img
+          id="image"
+          src="https://lh3.googleusercontent.com/-tJ0exa-sFRDGwxCfFtT3kaKnhcmHAvtjqHDP41VZhmjMHrNxR7jTkuXxHlonYHF-0oB9I62PsCqlLDA2P8bGcuVdx2yoV5n02Luyqj5E_Sn1kPHeg=w2880-l90-sg-rj-c0xffffff"
+          width="350px"
+        />
+      </div>
+      <div id="box">
+        <img
+          id="image"
+          src="https://lh3.googleusercontent.com/NI27_AAhQGjJV8RQrRZy7Goby8Ot7grFp8_stAiXV0gp7OYS0MLOl_GLWNkRLIvdcmAURns7q9QwFSuuqW-yvM9e5P7bILu_IkYlLyAChGuCR9iQOhI=w1024-l90-sg-rj-c0xffffff"
+          width="350px"
+        />
+      </div>
+    </div>
+  </body>
+</html>
