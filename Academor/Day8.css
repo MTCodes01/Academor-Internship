@@ -115,17 +115,35 @@ footer p i {
   background-color: rgb(249, 135, 22);
   border-radius: 20px;
 }
-.section:hover {
-  transform: scale(1.03);
+/* .section:hover {
+  transform: scale(1.03, 1.03);
   border: 3px solid rgb(0, 0, 128);
   transition: 0.5s;
 }
+.section:hover h3,
+.section:hover p,
+.section:hover img {
+  transform: scale(1);
+}
+.section:hover > .section:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.97, 0.97);
+  border: 3px solid rgb(0, 0, 128);
+  transition: 0.5s;
+} */
 .section:hover {
-  h3,
-  p,
-  img {
-    transform: scale(1);
-  }
+  transform: scale(1.03, 1.03);
+  border: 3px solid rgb(0, 0, 128);
+  transition: 0.5s;
+}
+.section:hover h3,
+.section:hover p,
+.section:hover img {
+  transform: scale(1);
+}
+.wrapper:hover > .section:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.97, 0.97);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
