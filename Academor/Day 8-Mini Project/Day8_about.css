@@ -1,0 +1,175 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: #202124;
+  color: white;
+}
+.container {
+  background-color: rgb(22, 22, 22);
+  border-bottom: 4px solid white;
+  display: flex;
+}
+.about {
+  padding: 29.7525px 0px;
+  margin-left: 1vw;
+  flex: 1;
+  transition: 0.1s ease-in-out;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1vw;
+  margin-right: 7%;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 1vh 1vw;
+  margin-left: 3vw;
+  color: rgb(255, 255, 255);
+  font-size: 1vw;
+}
+.navbar a.active {
+  background-color: rgb(255, 153, 51);
+  border-radius: 20px;
+}
+.highlight {
+  color: rgb(4, 255, 138);
+  font-weight: bolder;
+}
+.content .red {
+  color: red;
+}
+.me .highlight {
+  font-size: -1.2vw;
+  font-weight: bolder;
+  color: chocolate;
+}
+.title {
+  color: rgb(127, 105, 255);
+}
+.shadow {
+  text-decoration: none;
+}
+.shadow img {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px grey;
+  transition: 0.1s ease-in-out;
+}
+footer {
+  border-top: 4px solid white;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  color: white;
+  font-size: 2vw;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+i {
+  background-color: black;
+  border-radius: 10px;
+  margin: 2vw;
+  transition: 0.1s ease-in-out;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #202124;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Animation */
+.about:hover {
+  color: red;
+}
+.navbar a:hover {
+  color: rgb(0, 0, 128);
+  background-color: rgb(19, 136, 8);
+  border-radius: 20px;
+}
+.navbar a.active:hover {
+  color: rgb(0, 0, 128);
+  background-color: rgb(249, 135, 22);
+  border-radius: 20px;
+}
+.highlight:hover {
+  text-shadow: 0px 0px 10px rgb(236, 253, 0);
+}
+.red:hover {
+  text-shadow: 0px 0px 10px rgb(255, 128, 128);
+}
+.title:hover {
+  text-shadow: 0px 0px 10px rgb(0, 108, 65);
+}
+.shadow img:hover {
+  box-shadow: 0px 0px 20px white;
+  scale: 1.1;
+}
+p .shadow img:hover {
+  box-shadow: 0px 0px 10px white;
+  scale: 1.5;
+}
+i:hover {
+  box-shadow: 0px 0px 10px white;
+  scale: 1.5;
+}
+.fa-instagram:hover {
+  background: linear-gradient(
+    rgb(254, 218, 117),
+    rgb(250, 126, 30),
+    rgb(214, 41, 118),
+    rgb(150, 47, 191),
+    rgb(79, 91, 213)
+  );
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-youtube:hover {
+  color: rgb(255, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-hackerrank:hover {
+  color: rgb(46, 200, 102);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.2;
+}
+.fa-github:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-linkedin:hover {
+  color: rgb(10, 102, 194);
+  background-color: white;
+  border-radius: 1px;
+  height: fit-content;
+  transition: 0.5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -10,7 +10,6 @@ body {
   display: flex;
 }
 .logo {
-  margin-top: 10px;
   flex: 1;
 }
 .navbar {
@@ -90,8 +89,15 @@ footer p {
   align-items: center;
   justify-content: center;
 }
-footer p i {
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+i {
+  background-color: black;
+  border-radius: 10px;
   margin: 2vw;
+  transition: 0.1s ease-in-out;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -115,26 +121,9 @@ footer p i {
   background-color: rgb(249, 135, 22);
   border-radius: 20px;
 }
-/* .section:hover {
-  transform: scale(1.03, 1.03);
-  border: 3px solid rgb(0, 0, 128);
-  transition: 0.5s;
-}
-.section:hover h3,
-.section:hover p,
-.section:hover img {
-  transform: scale(1);
-}
-.section:hover > .section:not(:hover) {
-  filter: blur(10px);
-  transform: scale(0.97, 0.97);
-  border: 3px solid rgb(0, 0, 128);
-  transition: 0.5s;
-} */
 .section:hover {
   transform: scale(1.03, 1.03);
   border: 3px solid rgb(0, 0, 128);
-  transition: 0.5s;
 }
 .section:hover h3,
 .section:hover p,
@@ -144,6 +133,50 @@ footer p i {
 .wrapper:hover > .section:not(:hover) {
   filter: blur(10px);
   transform: scale(0.97, 0.97);
+}
+i:hover {
+  box-shadow: 0px 0px 10px white;
+  scale: 1.5;
+}
+.fa-instagram:hover {
+  background: linear-gradient(
+    rgb(254, 218, 117),
+    rgb(250, 126, 30),
+    rgb(214, 41, 118),
+    rgb(150, 47, 191),
+    rgb(79, 91, 213)
+  );
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-youtube:hover {
+  color: rgb(255, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-hackerrank:hover {
+  color: rgb(46, 200, 102);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.2;
+}
+.fa-github:hover {
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  height: fit-content;
+  transition: 0.5;
+}
+.fa-linkedin:hover {
+  color: rgb(10, 102, 194);
+  background-color: white;
+  border-radius: 1px;
+  height: fit-content;
+  transition: 0.5;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
