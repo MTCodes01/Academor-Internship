@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #image1 {
+        width: 400px;
+        animation-name: naruto;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+      }
+      @keyframes naruto {
+        from {
+          transform: scale(0.4);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      .image2 {
+        width: 200px;
+        height: 200px;
+        background: black;
+        animation: rotate 3s infinite;
+      }
+      @keyframes rotate {
+        /* 0% {
+          transform: rotate(0deg);
+        }
+        40% {
+          transform: rotate(360deg);
+        } */
+
+        from {
+          transform: translateY(100px);
+        }
+        to {
+          transform: translateY(500px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img id="image1" src="./test.png" />
+    <img
+      id="image2"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTDQSD7QdOHxzIBk2anzF2McF783y-Zr3gRj2oUs1xxQ&s"
+    />
+    <!-- <div class="image2">
+      jhv
+    </div> -->
+  </body>
+</html>
