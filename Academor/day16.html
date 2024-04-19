@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 200px;
+        background-color: brown;
+        color: white;
+      }
+      .circle {
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        border-radius: 100%;
+      }
+      p {
+        width: 500px;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" onmouseenter="color()">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        aliquam dolor perspiciatis, illum ullam iusto fugit dicta voluptates
+        beatae quam iure, saepe fuga praesentium ex expedita sed sequi harum
+        minus?
+      </p>
+      <button onclick="image()" id="data">Click me</button>
+      <img id="image" />
+    </div>
+    <div class="circle" onmouseenter="color_()"></div>
+    <script>
+      function color() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        var color = "rgb(" + r + "," + g + "," + b + ")";
+        document.querySelector(".container").style.background = color;
+      }
+      function color_() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        var color = "rgb(" + r + "," + g + "," + b + ")";
+        document.querySelector(".circle").style.background = color;
+      }
+      function image() {
+        // let array = ['test.png','test2.jpg','test3.jpg']
+        // if ()
+        // let a=document.createElement('img')
+        // a.setAttribute("src","./test.png")
+        // a.setAttribute("width","500px")
+        // document.querySelector('#data').appendChild(a)
+        let a = document.getElementById("image");
+        a.setAttribute("width", "500px");
+        if (a.src.endsWith("test.png")) {
+          a.src = "test2.jpg";
+        } else if (a.src.endsWith("test2.jpg")) {
+          a.src = "test3.jpg";
+        } else {
+          a.src = "test.png";
+        }
+      }
+    </script>
+  </body>
+</html>
