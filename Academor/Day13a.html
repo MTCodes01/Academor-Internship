@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="boot.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link href="boot.css" rel="stylesheet" />
     <style>
-        .main {
-            width: 500px;
-            height: 400px;
-            background-color: beige;
-            box-shadow: 10px 10px 10px grey;
-        }
-        .a {
-            width: 200px;
-            height: 300px;
-            background-color: white;
-            box-shadow: 10px 10px 10px grey;
-        }
+      .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px black solid;
+      }
     </style>
-</head>
-<body style="background-color: rgb(228, 228, 228);">
-  <div class="container text-center">
-    <div class="row border" style="background-color: rgb(255, 255, 255);">
-      <div class="col">
-        Column
+  </head>
+  <body>
+    <div class="container box">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Calculate Age</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">Convert</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        Column
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group mb-3"></div>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
