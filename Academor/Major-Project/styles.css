@@ -184,7 +184,22 @@ img {
   width: 10vw;
 }
 
+.content {
+  box-shadow: 0vw 1vh 1vh inset rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  color: white;
+  font-size: xx-large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background-color: rgb(22, 22, 22);
+}
+
 footer {
+  box-shadow: 0vw -1vh 1vh rgb(0, 0, 0);
+  border-top: rgb(73, 73, 73) 1vh solid;
   background-color: rgb(22, 22, 22);
   display: flex;
   align-items: center;
@@ -193,7 +208,6 @@ footer {
   height: 20vh;
   color: white;
   font-size: 2vw;
-  box-shadow: 0vw 1vh 1vh inset rgb(0, 0, 0);
 }
 
 footer p {
