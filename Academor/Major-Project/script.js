@@ -1,6 +1,6 @@
 // Tried making the 7-day forecast but in the free tier of the API its only having the current weather and 3-hour Forecast 5 days
 
-const apiKey = `${{ secrets.APIKEY }}`;
+const apiKey = "3f5ff7d4c3a87487b1cddacd364d3d2d";
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -25,20 +25,24 @@ async function getCurrentWeather(latitude, longitude) {
     // Just for Viewing the json response
     console.log("Current Weather Data:", JSON.stringify(data, null, 2));
 
-    document.getElementById("temp").textContent =
-      Math.round(data.main.temp - 273.15) + "°C";
-    document.getElementById("status_text").textContent =
-      data.weather[0].description;
-    document.getElementById("location").textContent =
-      data.name + ", " + data.sys.country;
+    const weatherContainer = document.querySelector(".container");
 
+    const temp = Math.round(data.main.temp - 273.15);
+    const description = data.weather[0].description;
     const iconCode = data.weather[0].icon;
     const iconUrl = `./icons/${iconCode}.png`;
-    document.getElementById("status_img").src = iconUrl;
+
+    weatherContainer.innerHTML = `
+      <img id="status_img" src="${iconUrl}" />
+      <h2 id="temp">${temp}°C</h2>
+      <h2 id="status_text">${description}</h2>
+      <h2 id="location">${data.name + ", " + data.sys.country}</h2>
+    `;
   } catch (error) {
     console.error("Error fetching current weather data:", error);
   }
 }
+
 
 async function getForecast(latitude, longitude) {
   try {
@@ -73,7 +77,7 @@ async function getForecast(latitude, longitude) {
 
     const box_2 = document.querySelector(".box_2");
     box_2.innerHTML = `
-      <h1>5-Day Forecast</h1>
+      <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
 
@@ -143,7 +147,7 @@ async function searchWeather() {
 
       const box_2 = document.querySelector(".box_2");
       box_2.innerHTML = `
-      <h1>5-Day Forecast</h1>
+      <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
 
