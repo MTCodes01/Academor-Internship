@@ -45,6 +45,15 @@ a {
   transition: 0.2s ease-in-out;
 }
 
+.big {
+  font-size: 1vw;
+  font-weight: bolder;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(0.1vw);
+}
 button:hover {
   background-color: rgba(128, 243, 176, 0.5);
 }
