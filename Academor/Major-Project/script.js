@@ -1,6 +1,6 @@
 // Tried making the 7-day forecast but in the free tier of the API its only having the current weather and 3-hour Forecast 5 days
 
-const apiKey = "3f5ff7d4c3a87487b1cddacd364d3d2d";
+const apiKey = `${{ secrets.APIKEY }}`;
 
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(showPosition);
