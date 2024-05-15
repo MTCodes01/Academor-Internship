@@ -31,11 +31,24 @@ async function getCurrentWeather(latitude, longitude) {
     const description = data.weather[0].description;
     const iconCode = data.weather[0].icon;
     const iconUrl = `./icons/${iconCode}.png`;
+    const humidity = data.main.humidity;
+    const wind_speed = data.wind["speed"];
+    const dateTime = new Date(data.dt * 1000).toLocaleString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    });
 
     weatherContainer.innerHTML = `
+      <h2>${dateTime}</h2>
       <img id="status_img" src="${iconUrl}" />
       <h2 id="temp">${temp}°C</h2>
       <h2 id="status_text">${description}</h2>
+      <h2 id=humidity>Humidity : ${humidity}</h2>
+      <h2 id=humidity>Wind Speed : ${wind_speed}</h2>
       <h2 id="location">${data.name + ", " + data.sys.country}</h2>
     `;
   } catch (error) {
@@ -76,8 +89,7 @@ async function getForecast(latitude, longitude) {
 
     const box_2 = document.querySelector(".box_2");
     box_2.innerHTML = `
-    
-      <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
+      <h1>${Object.keys(dailyForecasts).length - 1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
     const forecastContainer = document.querySelector(".forecast-container");
@@ -114,6 +126,12 @@ async function searchWeather() {
 
     if (inp == "") {
       alert("No Value Inputted");
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        document.getElementById("temp").textContent =
+          "Geolocation is not supported by this browser.";
+      }
     } else {
       const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${inp}&appid=${apiKey}`;
       const response = await fetch(apiUrl);
@@ -133,21 +151,34 @@ async function searchWeather() {
 
         if (!dailyForecasts[date]) {
           dailyForecasts[date] = {
+            dateTime: [],
             temps: [],
             descriptions: [],
             icons: [],
+            wind_speeds: [],
+            humidities: [],
           };
         }
 
+        dailyForecasts[date].dateTime.push(new Date(entry.dt * 1000).toLocaleDateString("en-US", {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric",
+          })
+        );
         dailyForecasts[date].temps.push(entry.main.temp);
         dailyForecasts[date].descriptions.push(entry.weather[0].description);
         dailyForecasts[date].icons.push(entry.weather[0].icon);
+        dailyForecasts[date].wind_speeds.push(entry.wind.speed);
+        dailyForecasts[date].humidities.push(entry.main.humidity);
       });
 
       const box_2 = document.querySelector(".box_2");
       box_2.innerHTML = `
-      
-      <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
+      <h1>${Object.keys(dailyForecasts).length - 1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
 
@@ -178,18 +209,24 @@ async function searchWeather() {
       const date = Object.keys(dailyForecasts)[0];
       const weatherContainer = document.querySelector(".container");
       const temps = dailyForecasts[date].temps;
-      const avgTemp = Math.round(
+
+      const temp = Math.round(
         temps.reduce((sum, temp) => sum + temp, 0) / temps.length - 273.15
       );
-
       const description = dailyForecasts[date].descriptions[0];
       const iconCode = dailyForecasts[date].icons[0];
       const iconUrl = `./icons/${iconCode}.png`;
+      const humidity = dailyForecasts[date].humidities[0];
+      const wind_speed = dailyForecasts[date].wind_speeds[0];
+      const dateTime = dailyForecasts[date].dateTime[0];
 
       weatherContainer.innerHTML = `
+      <h2>${dateTime}</h2>
       <img id="status_img" src="${iconUrl}" />
-      <h2 id="temp">${avgTemp}°C</h2>
+      <h2 id="temp">${temp}°C</h2>
       <h2 id="status_text">${description}</h2>
+      <h2 id="humidity">Humidity : ${humidity}</h2>
+      <h2 id="wind">Wind Speed : ${wind_speed}</h2>
       <h2 id="location">${data.city.name + ", " + data.city.country}</h2>
     `;
     }
