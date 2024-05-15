@@ -1,0 +1,64 @@
+/* Animations */
+.box:hover {
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+  }
+  
+  .forecast-day:hover {
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05) translateY(2.5vh);
+  }
+  
+  button:hover {
+    background-color: #005f05;
+  }
+  
+  footer p a:hover {
+    transform: scale(1.5);
+  }
+  .fa-instagram:hover {
+    background: linear-gradient(
+      rgb(254, 218, 117),
+      rgb(250, 126, 30),
+      rgb(214, 41, 118),
+      rgb(150, 47, 191),
+      rgb(79, 91, 213)
+    );
+    border-radius: 10px;
+    height: fit-content;
+    transition: 0.5;
+  }
+  .fa-youtube:hover {
+    color: rgb(255, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    transition: 0.5;
+  }
+  .fa-hackerrank:hover {
+    color: rgb(46, 200, 102);
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    transition: 0.2;
+  }
+  .fa-github:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 10px;
+    height: fit-content;
+    transition: 0.5;
+  }
+  .fa-linkedin:hover {
+    color: rgb(10, 102, 194);
+    background-color: white;
+    border-radius: 1px;
+    height: fit-content;
+    transition: 0.5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

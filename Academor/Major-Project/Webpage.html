@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./animations.css" />
+    <link rel="stylesheet" href="./media_queries.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="landing">
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter city name"
+          required
+        />
+        <button onclick="searchWeather()" type="submit">Search</button>
+      </div>
+      <div class="info">
+        <div class="box">
+          <h1>Weather</h1>
+          <div class="container">
+            <img id="status_img" src="./icons/unknown.png" />
+            <h2 id="temp">--</h2>
+            <h2 id="status_text">--</h2>
+            <h2 id="location">--</h2>
+          </div>
+        </div>
+        <div class="box_2">
+          <h1>--</h1>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        <a
+          href="https://www.linkedin.com/in/sreedev-ss-3096aa291/"
+          target="blank"
+          class="shadow"
+        >
+          <i class="fa-brands fa-linkedin a"></i
+        ></a>
+        <a href="https://instagram.com/_mt_yt_" target="blank" class="shadow">
+          <i class="fa-brands fa-instagram a"></i
+        ></a>
+        <a href="https://github.com/MTCodes01" target="blank" class="shadow">
+          <i class="fa-brands fa-github a"></i
+        ></a>
+        <a href="https://www.youtube.com/@mt_yt" target="blank" class="shadow">
+          <i class="fa-brands fa-youtube a"></i
+        ></a>
+        <a
+          href="https://www.hackerrank.com/sreedevss05"
+          target="blank"
+          class="shadow"
+        >
+          <i class="fa-brands fa-hackerrank"></i
+        ></a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
