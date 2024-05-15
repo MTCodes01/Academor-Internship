@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./bg_img.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.box {
+  padding: 8vh 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 60vh;
+  background: transparent;
+  border-radius: 1vw;
+  border: 0.1vw solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2vw rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(1vw);
+  transition: 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+}
+
+.container img {
+  width: 10vw;
+  margin-bottom: 1vw;
+}
+
+.container h2 {
+  font-size: 1.2vw;
+  margin: 0.5vw 0;
+}
+
+.box_2 {
+  padding: 1vh 1vw;
+  margin: 0px 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+  height: 60vh;
+  background: transparent;
+  border-radius: 1vw;
+  border: 0.1vw solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2vw rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(1vw);
+  overflow-y: auto;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 1vw 0.3vw;
+  width: 10vw;
+  height: 40vh;
+  background: rgba(231, 231, 231, 0.2);
+  border-radius: 0.5vw;
+  padding: 0.3vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+  transition: 0.4s ease-out;
+}
+
+.forecast-day img {
+  width: 5vw;
+  margin-bottom: 1vw;
+}
+
+.forecast-day h2 {
+  font-size: 1.2vw;
+  margin-bottom: 0.5vw;
+}
+
+.forecast-day p {
+  font-size: 1vw;
+  font-weight: 500;
+  margin: 0.5vw 0;
+}
+
+h1 {
+  font-size: 2vw;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 1vw #4e4e4e;
+}
+
+h2 {
+  font-size: 1.5vw;
+  color: #ffffff;
+  text-align: center;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+}
+
+/* Animations */
+.box:hover {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.forecast-day:hover {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
