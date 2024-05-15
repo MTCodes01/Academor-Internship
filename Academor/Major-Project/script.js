@@ -80,7 +80,6 @@ async function getForecast(latitude, longitude) {
       <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
-
     const forecastContainer = document.querySelector(".forecast-container");
 
     Object.keys(dailyForecasts)
