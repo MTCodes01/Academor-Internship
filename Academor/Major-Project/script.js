@@ -43,7 +43,6 @@ async function getCurrentWeather(latitude, longitude) {
   }
 }
 
-
 async function getForecast(latitude, longitude) {
   try {
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
@@ -77,6 +76,7 @@ async function getForecast(latitude, longitude) {
 
     const box_2 = document.querySelector(".box_2");
     box_2.innerHTML = `
+    
       <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
@@ -146,6 +146,7 @@ async function searchWeather() {
 
       const box_2 = document.querySelector(".box_2");
       box_2.innerHTML = `
+      
       <h1>${(Object.keys(dailyForecasts).length)-1}-Day Forecast</h1>
       <div class="forecast-container"></div>
     `;
